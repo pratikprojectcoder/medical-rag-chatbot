@@ -1,0 +1,90 @@
+                    ┌────────────────────┐
+                    │ Medical PDFs/Books │
+                    └─────────┬──────────┘
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │ Document Loader        │
+                 │ PDF Parsing            │
+                 │ Text Extraction        │
+                 └──────────┬─────────────┘
+                            │
+                            ▼
+                 ┌────────────────────────┐
+                 │ Text Chunking          │
+                 │ Chunk Size + Overlap   │
+                 └──────────┬─────────────┘
+                            │
+                            ▼
+                 ┌────────────────────────┐
+                 │ Embedding Model        │
+                 │ Sentence Transformers  │
+                 └──────────┬─────────────┘
+                            │
+                            ▼
+                 ┌────────────────────────┐
+                 │ Vector Database        │
+                 │ FAISS / Chroma         │
+                 └────────────────────────┘
+
+
+=====================================================
+
+
+                    USER CHAT FLOW
+
+
+=====================================================
+
+
+┌─────────────┐
+│    User     │
+└──────┬──────┘
+       │
+       ▼
+
+┌────────────────────────────┐
+│      Streamlit Chat UI     │
+│----------------------------│
+│ Chat Window                │
+│ PDF Upload                 │
+│ Conversation History       │
+│ Source Citations           │
+└──────────┬─────────────────┘
+           │
+           ▼
+
+┌────────────────────────────┐
+│      LangGraph Workflow    │
+│----------------------------│
+│ Query Understanding        │
+│ Conversation Memory        │
+│ Query Rewriting            │
+│ Semantic Retrieval         │
+│ Context Validation         │
+│ Prompt Building            │
+│ LLM Generation             │
+│ Medical Safety Checks      │
+└──────────┬─────────────────┘
+           │
+           ▼
+
+┌────────────────────────────┐
+│      Vector Database       │
+│----------------------------│
+│ Retrieve Top Medical Docs  │
+└──────────┬─────────────────┘
+           │
+           ▼
+
+┌────────────────────────────┐
+│       LLM APIs             │
+│----------------------------│
+│ GPT / Claude / Gemini      │
+└──────────┬─────────────────┘
+           │
+           ▼
+
+┌────────────────────────────┐
+│     Final Medical Answer   │
+└────────────────────────────┘
