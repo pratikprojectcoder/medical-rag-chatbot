@@ -188,7 +188,7 @@ def generation_node(state):
 
     answer = response.choices[0].message.content.strip()
 
-    answer += "\n\n⚠️ This information is for educational purposes and is not a substitute for professional medical advice."
+    answer += "\n\nNote: This information is for educational purposes and is not a substitute for professional medical advice."
 
     state["answer"] = answer
 

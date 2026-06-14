@@ -297,7 +297,7 @@ def ask_medical_question(query, chat_history):
 
     answer += """
 
-⚠️ This information is for educational purposes
+Note: This information is for educational purposes
 and is not a substitute for professional
 medical advice.
 """

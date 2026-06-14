@@ -11,7 +11,6 @@ from langgraph_pipeline import (
 
 st.set_page_config(
     page_title="Medical RAG Chatbot",
-    page_icon="🩺",
     layout="wide"
 )
 
@@ -43,7 +42,7 @@ st.markdown(
 
 with st.sidebar:
 
-    st.title("🩺 Medical AI Assistant")
+    st.title("Medical AI Assistant")
 
     st.markdown("---")
 
@@ -90,7 +89,7 @@ LLM Generation
 
     # CLEAR CHAT BUTTON
 
-    if st.button("🗑️ Clear Chat"):
+    if st.button("Clear Chat"):
 
         st.session_state.messages = []
 
@@ -100,7 +99,7 @@ LLM Generation
 # TITLE
 # ============================================
 
-st.title("🩺 Medical RAG Chatbot")
+st.title("Medical RAG Chatbot")
 
 st.caption(
     "AI-powered medical assistant using LangGraph, "
